@@ -15,7 +15,7 @@ A Flutter application that suggests boba drink toppings using AI. The app analyz
 - **Flutter**: UI framework
 - **BLoC/Provider**: State management
 - **Clean Architecture**: Application structure
-- **OpenAI API**: AI model integration for drink analysis
+- **Google Generative AI (Gemini)**: AI model integration for drink analysis
 - **Speech-to-Text**: Voice input functionality
 
 ## AI Model Options
@@ -24,7 +24,6 @@ The app supports multiple AI service providers:
 
 1. **Mock Data (Default)**: Uses pre-programmed responses based on drink name patterns. No API key required.
 2. **Google Generative AI (Gemini)**: Uses Google's Gemini model for AI analysis.
-3. **OpenAI**: Uses OpenAI's GPT models for AI analysis.
 
 ## Setup Instructions
 
@@ -40,16 +39,6 @@ The app is configured to use mock data by default, which doesn't require any API
    GOOGLE_AI_API_KEY=your_gemini_api_key_here
    ```
 3. Open `lib/core/di/injection_container.dart` and set `useMockData = false`
-
-### Using OpenAI
-
-1. Get an API key from [OpenAI Platform](https://platform.openai.com/)
-2. Create a `.env` file in the project root with:
-   ```
-   OPENAI_API_KEY=your_openai_api_key_here
-   ```
-3. Open `lib/core/di/injection_container.dart` and set `useMockData = false`
-4. Modify the dependency injection in `injection_container.dart` to use OpenAIService instead of GoogleGenerativeAIService
 
 ## Mock Data Features
 
@@ -67,7 +56,6 @@ It then provides appropriate flavor profiles and topping recommendations based o
 
 - Flutter SDK (3.4.1 or higher)
 - Dart (3.4.1 or higher)
-- An API key from OpenAI
 
 ### Installation
 
@@ -86,10 +74,9 @@ It then provides appropriate flavor profiles and topping recommendations based o
    flutter pub get
    ```
 
-4. Create a `.env` file in the root directory with your API key
+4. (Optional) Create a `.env` file in the root directory with your Google AI API key if you want to use Gemini:
    ```
-   # AI API Keys
-   OPENAI_API_KEY=your_openai_api_key_here
+   GOOGLE_AI_API_KEY=your_gemini_api_key_here
    ```
 
 5. Run the app
@@ -132,14 +119,14 @@ lib/
 ## How It Works
 
 1. Enter the name of your boba drink (e.g., "Jasmine Milk Tea", "Matcha Latte", etc.)
-2. The app uses OpenAI to analyze the drink's composition, flavor profile, and texture
+2. The app uses Google Generative AI (Gemini) to analyze the drink's composition, flavor profile, and texture
 3. Based on this analysis, the app recommends the best toppings with compatibility scores
 4. Each recommendation includes details about why the topping pairs well with your drink
 5. Save recommendations you like for future reference
 
 ## API Usage Notes
 
-The app uses OpenAI's GPT-3.5-Turbo model by default. This offers a good balance between accuracy and cost. If you prefer to use the more powerful GPT-4 model, you can modify the `openAIModel` constant in the `app_constants.dart` file.
+The app uses Google's Gemini model for AI-powered drink analysis and topping recommendations. Make sure to provide a valid Google AI API key in your `.env` file if you want to use this feature.
 
 ## License
 
@@ -147,8 +134,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgements
 
-- OpenAI for providing powerful AI models
 - Flutter and Dart teams for the wonderful framework
+- Google for providing powerful AI models
 - Boba tea shops everywhere for the inspiration
 
 ## Screenshots
