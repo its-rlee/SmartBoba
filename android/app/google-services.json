@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "782034435679",
+    "project_id": "smart-boba",
+    "storage_bucket": "smart-boba.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782034435679:android:f8cf546f7248bf3f9aa5ea",
+        "android_client_info": {
+          "package_name": "com.example.smart_boba"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-yalpbdNkZz9j2fROW30jWAWr4E3V9Xo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782034435679:android:a66ee6651d6f71eb9aa5ea",
+        "android_client_info": {
+          "package_name": "com.rlee.smartboba"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-yalpbdNkZz9j2fROW30jWAWr4E3V9Xo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
