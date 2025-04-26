@@ -153,6 +153,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Screenshots
 
-![Screenshot 1](assets/images/screenshot01.png)
-![Screenshot 2](assets/images/screenshot02.png)
-![Screenshot 3](assets/images/screenshot03.png)
+<img src="assets/images/screenshot01.png" alt="Screenshot 1" width="300"/>
+<img src="assets/images/screenshot02.png" alt="Screenshot 2" width="300"/>
+<img src="assets/images/screenshot03.png" alt="Screenshot 3" width="300"/>
